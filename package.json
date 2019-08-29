@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "concurrently": "^4.1.2",
     "react-scripts": "3.1.1"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
   "scripts": {
+    "server": "concurrently \"npm start\" \"json-server --watch db.json --port 8080\"",
+    "client": "node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
